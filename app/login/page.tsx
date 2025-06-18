@@ -17,7 +17,7 @@ export default function Component() {
 
   const handleContinue = () => {
     // Aquí puedes agregar validaciones antes de navegar
-    router.push("/dashboard") // <-- Cambia aquí a la ruta de tu dashboard
+    router.push("/appointment") // <-- Cambia aquí a la ruta de tu dashboard
   }
 
 
