@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation" // <-- Agrega esta línea
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -11,6 +12,14 @@ import Image from "next/image"
 import Link from "next/link"
 export default function Component() {
   const [showPassword, setShowPassword] = useState(false)
+
+  const router = useRouter() // <-- Agrega esta línea
+
+  const handleContinue = () => {
+    // Aquí puedes agregar validaciones antes de navegar
+    router.push("/dashboard") // <-- Cambia aquí a la ruta de tu dashboard
+  }
+
 
   return (
     <div className="min-h-screen flex">
@@ -116,7 +125,10 @@ export default function Component() {
             </div>
 
             {/* Login button */}
-            <Button className="w-full bg-[#1a4a84] hover:bg-[#1a4a84]/90 text-white rounded-full py-6 text-lg font-medium">
+            <Button className="w-full bg-[#1a4a84] hover:bg-[#1a4a84]/90 text-white rounded-full py-6 text-lg font-medium"
+              onClick={handleContinue} // <-- Cambia aquí
+
+            >
               INICIAR SESIÓN
             </Button>
           </div>

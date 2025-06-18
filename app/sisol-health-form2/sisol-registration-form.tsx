@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { useRouter } from "next/navigation" // <-- Agrega esta línea
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -23,7 +22,6 @@ export default function Component() {
     sexo: "",
     domicilio: "",
   })
-  const router = useRouter() // <-- Agrega esta línea
 
   const handleInputChange = (field: keyof FormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }))
@@ -168,14 +166,11 @@ export default function Component() {
               </p>
 
               {/* Continue button */}
-      <div className="flex justify-center pt-8">
-        <Button
-          className="bg-[#1a4a84] hover:bg-[#1a4a84]/90 text-white px-12 py-4 rounded-full text-lg font-semibold h-14"
-                onClick={() => router.push("/sisol-registration-form3")} // <-- Cambia aquí
-        >
-          CONTINUAR
-        </Button>
-      </div>
+              <div className="flex justify-center pt-8">
+                <Button className="bg-[#1a4a84] hover:bg-[#1a4a84]/90 text-white px-12 py-4 rounded-full text-lg font-semibold h-14">
+                  CONTINUAR
+                </Button>
+              </div>
             </div>
           </div>
         </div>
