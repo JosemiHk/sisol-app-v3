@@ -37,7 +37,7 @@ export default function Component() {
           </div>
 
           {/* Login page indicator */}
-          <div className="w-full mb-6 bg-[#b4c4d6] text-white rounded-full py-3 text-center font-medium">
+          <div className="w-full mb-6 bg-[##fffefc] text-black rounded-full py-3 text-center font-medium">
             Bienvenido de nuevo, por favor inicia sesión
           </div>
 
