@@ -15,12 +15,13 @@
     "incremental": true,
     "plugins": [
       {
-        "name": "next"
+        "name": "next" // This plugin is used to enable Next.js specific features in TypeScript
       }
     ],
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "types": ["react", "react-dom"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
